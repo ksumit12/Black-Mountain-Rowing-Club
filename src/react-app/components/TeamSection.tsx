@@ -11,28 +11,28 @@ export default function TeamSection() {
       name: "Yuge Huang",
       role: "UI/UX & Visual Communication",
       email: "yuge.huang@anu.edu.au",
-      image: "https://mocha-cdn.com/0199672f-8c34-7bd3-8d98-c2a941454b67/image.png_7064.png",
+      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjY0IiBjeT0iNDgiIHI9IjE2IiBmaWxsPSIjOUI5QjlCIi8+CjxwYXRoIGQ9Ik00MCA4OEM0MCA3Ni45NTQzIDQ4Ljk1NDMgNjggNjAgNjhINjRINjhINzJDODMuMDQ1NyA2OCA5MiA3Ni45NTQzIDkyIDg4VjEwMEg0MFY4OFoiIGZpbGw9IiM5QjlCOUIiLz4KPC9zdmc+",
       description: "Driven electrical engineering student, passionate about designing reliable monitoring systems. Skilled in technical analysis, Power system design, data-driven decision-making, and effective teamwork."
     },
     {
       name: "Aryan Arora",
       role: "Hardware Development Lead",
       email: "aryan.arora@anu.edu.au", 
-      image: "https://mocha-cdn.com/0199672f-8c34-7bd3-8d98-c2a941454b67/image.png_1351.png",
+      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjY0IiBjeT0iNDgiIHI9IjE2IiBmaWxsPSIjOUI5QjlCIi8+CjxwYXRoIGQ9Ik00MCA4OEM0MCA3Ni45NTQzIDQ4Ljk1NDMgNjggNjAgNjhINjRINjhINzJDODMuMDQ1NyA2OCA5MiA3Ni45NTQzIDkyIDg4VjEwMEg0MFY4OFoiIGZpbGw9IiM5QjlCOUIiLz4KPC9zdmc+",
       description: "An inventive mechatronics engineer who fuses hardware and code to create intelligent, high-impact systems. Known for rapid problem-solving, precision execution, and a mindset wired for innovation."
     },
     {
       name: "Sumit Khobragade",
       role: "Technical Lead / Software",
       email: "sumit.khobragade@anu.edu.au",
-      image: "https://mocha-cdn.com/0199672f-8c34-7bd3-8d98-c2a941454b67/image.png_8064.png", 
+      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjY0IiBjeT0iNDgiIHI9IjE2IiBmaWxsPSIjOUI5QjlCIi8+CjxwYXRoIGQ9Ik00MCA4OEM0MCA3Ni45NTQzIDQ4Ljk1NDMgNjggNjAgNjhINjRINjhINzJDODMuMDQ1NyA2OCA5MiA3Ni45NTQzIDkyIDg4VjEwMEg0MFY4OFoiIGZpbGw9IiM5QjlCOUIiLz4KPC9zdmc+", 
       description: "Mechatronics and robotics engineer with experience in embedded systems, UAVs, and real-time sensor integration. Currently focused on event-based vision and motion prediction, with a passion for building efficient, practical robotic solutions."
     },
     {
       name: "Anusha Yagnik",
       role: "Project Manager & Systems Design",
       email: "anusha.yagnik@anu.edu.au",
-      image: "https://mocha-cdn.com/0199672f-8c34-7bd3-8d98-c2a941454b67/image.png_5257.png",
+      image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjY0IiBjeT0iNDgiIHI9IjE2IiBmaWxsPSIjOUI5QjlCIi8+CjxwYXRoIGQ9Ik00MCA4OEM0MCA3Ni45NTQzIDQ4Ljk1NDMgNjggNjAgNjhINjRINjhINzJDODMuMDQ1NyA2OCA5MiA3Ni45NTQzIDkyIDg4VjEwMEg0MFY4OFoiIGZpbGw9IiM5QjlCOUIiLz4KPC9zdmc+",
       description: "Aspiring autonomous robotics professional, passionate about AI-driven machines that solve real-world problems independently. Aiming to work with global leaders shaping the future of intelligent automation."
     }
   ];
