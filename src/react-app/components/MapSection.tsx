@@ -20,20 +20,20 @@ export default function MapSection() {
 
   useEffect(() => {
     if (mapRef.current && !mapInstanceRef.current && isInView) {
-      // Initialize map centered on Black Mountain Peninsula, Canberra
-      const map = L.map(mapRef.current).setView([-35.29166, 149.10061], 15);
+      // Initialize map centered on Red Shed, 45 John Cardiff Cl, Acton ACT 2601
+      const map = L.map(mapRef.current).setView([-35.289722, 149.099917], 15);
 
       // Add OpenStreetMap tiles
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
       }).addTo(map);
 
-      // Add a marker for Black Mountain Rowing Club
-      const marker = L.marker([-35.29166, 149.10061]).addTo(map);
+      // Add a marker for Red Shed Rowing Club
+      const marker = L.marker([-35.289722, 149.099917]).addTo(map);
       marker.bindPopup(`
         <div style="text-align: center; padding: 8px;">
-          <h3 style="margin: 0 0 8px 0; color: #dc2626; font-size: 16px; font-weight: bold;">Black Mountain Rowing Club</h3>
-          <p style="margin: 0; color: #6b7280; font-size: 14px;">Black Mountain Peninsula, Canberra</p>
+          <h3 style="margin: 0 0 8px 0; color: #dc2626; font-size: 16px; font-weight: bold;">Red Shed Rowing Club</h3>
+          <p style="margin: 0; color: #6b7280; font-size: 14px;">45 John Cardiff Cl, Acton ACT 2601</p>
         </div>
       `);
 
@@ -64,7 +64,7 @@ export default function MapSection() {
             Project Location
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Located at Black Mountain Peninsula on the shores of Lake Burley Griffin, 
+            Located at the Red Shed (45 John Cardiff Cl, Acton ACT 2601), 
             our project serves the local rowing community in Canberra.
           </p>
         </motion.div>
@@ -102,17 +102,16 @@ export default function MapSection() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2 uppercase tracking-wide">
-                    Club Location
+                    Red Shed Location
                   </h3>
                   <p className="text-gray-600 mb-3 text-sm">
-                    Black Mountain Peninsula<br />
-                    Canberra, ACT 2601<br />
+                    45 John Cardiff Cl<br />
+                    Acton, ACT 2601<br />
                     Australia
                   </p>
                   <p className="text-sm text-gray-500">
-                    Situated on the beautiful shores of Lake Burley Griffin, 
-                    the club provides an ideal environment for rowing activities 
-                    and our digital tracking system implementation.
+                    The Red Shed provides an ideal environment for rowing activities 
+                    and our digital tracking system development and testing.
                   </p>
                 </div>
               </div>
