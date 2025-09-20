@@ -18,7 +18,7 @@ export default function Hero() {
           backgroundImage: 'url(https://mocha-cdn.com/0199672f-8c34-7bd3-8d98-c2a941454b67/IMG_8595.JPG)',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-red-900/70 to-slate-800/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-800/60 to-slate-800/80"></div>
       </div>
       
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-white">
