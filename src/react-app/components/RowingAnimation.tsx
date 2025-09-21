@@ -24,66 +24,85 @@ export default function RowingAnimation() {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollProgress = Math.min(scrollTop / docHeight, 1);
 
-      // Realistic rowing motion with 4 phases
+      // Proper rowing mechanics with correct stroke phases
       const rowers = animationRef.current?.querySelectorAll('.rower');
       rowers?.forEach((rower, index) => {
         const phaseOffset = index * 0.25; // Stagger the rowing motion (4 rowers)
         const rowingCycle = ((scrollProgress * 6) + phaseOffset) % 1;
         
-        // Realistic rowing phases
-        let armAngle, forearmAngle, oarAngle, bodyLean, seatPosition;
+        // Rowing stroke phases based on proper technique
+        let oarAngle, shoulderAngle, elbowAngle, torsoAngle, seatPosition, bladeRoll;
         
-        if (rowingCycle < 0.1) {
-          // Catch phase - arms extended, oar in water
-          armAngle = 0;
-          forearmAngle = 0;
-          oarAngle = 0;
-          bodyLean = 0;
-          seatPosition = 0;
-        } else if (rowingCycle < 0.4) {
-          // Drive phase - pulling back
-          const driveProgress = (rowingCycle - 0.1) / 0.3;
-          armAngle = -15 - (driveProgress * 45); // Arms pull back
-          forearmAngle = -10 - (driveProgress * 20); // Forearms bend
-          oarAngle = driveProgress * 25; // Oar rotates
-          bodyLean = driveProgress * 8; // Body leans back
-          seatPosition = driveProgress * 15; // Seat slides back
-        } else if (rowingCycle < 0.5) {
-          // Finish phase - arms at body
-          armAngle = -60;
-          forearmAngle = -30;
-          oarAngle = 25;
-          bodyLean = 8;
-          seatPosition = 15;
-        } else if (rowingCycle < 0.7) {
-          // Recovery phase - returning to catch
-          const recoveryProgress = (rowingCycle - 0.5) / 0.2;
-          armAngle = -60 + (recoveryProgress * 60);
-          forearmAngle = -30 + (recoveryProgress * 30);
-          oarAngle = 25 - (recoveryProgress * 25);
-          bodyLean = 8 - (recoveryProgress * 8);
-          seatPosition = 15 - (recoveryProgress * 15);
+        if (rowingCycle < 0.15) {
+          // Catch phase (0-15%)
+          const catchProgress = rowingCycle / 0.15;
+          oarAngle = -22 + (catchProgress * 12); // -22° to -10°
+          shoulderAngle = 55 - (catchProgress * 15); // 55° to 40°
+          elbowAngle = 70 - (catchProgress * 20); // 70° to 50°
+          torsoAngle = -3 + (catchProgress * 1); // -3° to -2°
+          seatPosition = 0; // Front
+          bladeRoll = 0; // Squared
+        } else if (rowingCycle < 0.35) {
+          // Early drive (15-35%)
+          const driveProgress = (rowingCycle - 0.15) / 0.20;
+          oarAngle = -10 + (driveProgress * 15); // -10° to +5°
+          shoulderAngle = 40 - (driveProgress * 15); // 40° to 25°
+          elbowAngle = 50 - (driveProgress * 25); // 50° to 25°
+          torsoAngle = -2 + (driveProgress * 2); // -2° to 0°
+          seatPosition = driveProgress * 60; // 0% to 60%
+          bladeRoll = 0; // Squared
+        } else if (rowingCycle < 0.60) {
+          // Mid drive to finish (35-60%)
+          const finishProgress = (rowingCycle - 0.35) / 0.25;
+          oarAngle = 5 + (finishProgress * 13); // +5° to +18°
+          shoulderAngle = 25 - (finishProgress * 10); // 25° to 15°
+          elbowAngle = 25 + (finishProgress * 15); // 25° to 40°
+          torsoAngle = 0 + (finishProgress * 3); // 0° to +3°
+          seatPosition = 60 + (finishProgress * 40); // 60% to 100%
+          bladeRoll = finishProgress * 16; // 0° to +16° (feather)
+        } else if (rowingCycle < 0.75) {
+          // Hands away (60-75%)
+          const handsAwayProgress = (rowingCycle - 0.60) / 0.15;
+          oarAngle = 18 - (handsAwayProgress * 10); // +18° to +8°
+          shoulderAngle = 15 + (handsAwayProgress * 10); // 15° to 25°
+          elbowAngle = 40 - (handsAwayProgress * 20); // 40° to 20°
+          torsoAngle = 3 - (handsAwayProgress * 1); // +3° to +2°
+          seatPosition = 100 - (handsAwayProgress * 30); // 100% to 70%
+          bladeRoll = 16; // Feathered
+        } else if (rowingCycle < 0.90) {
+          // Recovery (75-90%)
+          const recoveryProgress = (rowingCycle - 0.75) / 0.15;
+          oarAngle = 8 - (recoveryProgress * 16); // +8° to -8°
+          shoulderAngle = 25 + (recoveryProgress * 15); // 25° to 40°
+          elbowAngle = 20 + (recoveryProgress * 30); // 20° to 50°
+          torsoAngle = 2 - (recoveryProgress * 3); // +2° to -1°
+          seatPosition = 70 - (recoveryProgress * 40); // 70% to 30%
+          bladeRoll = 16 - (recoveryProgress * 16); // 16° to 0° (square)
         } else {
-          // Return to catch
-          armAngle = 0;
-          forearmAngle = 0;
-          oarAngle = 0;
-          bodyLean = 0;
-          seatPosition = 0;
+          // Return to catch (90-100%)
+          const returnProgress = (rowingCycle - 0.90) / 0.10;
+          oarAngle = -8 - (returnProgress * 14); // -8° to -22°
+          shoulderAngle = 40 + (returnProgress * 15); // 40° to 55°
+          elbowAngle = 50 + (returnProgress * 20); // 50° to 70°
+          torsoAngle = -1 - (returnProgress * 2); // -1° to -3°
+          seatPosition = 30 - (returnProgress * 30); // 30% to 0%
+          bladeRoll = 0; // Squared
         }
         
-        // Apply transformations
+        // Apply transformations with proper pivot points
         const upperArm = rower.querySelector('.upper-arm') as HTMLElement;
         const forearm = rower.querySelector('.forearm') as HTMLElement;
         const oar = rower.querySelector('.oar') as HTMLElement;
         const body = rower.querySelector('.body') as HTMLElement;
         const seat = rower.querySelector('.seat') as HTMLElement;
+        const blade = rower.querySelector('.blade') as HTMLElement;
         
-        if (upperArm) upperArm.style.transform = `rotate(${armAngle}deg)`;
-        if (forearm) forearm.style.transform = `rotate(${forearmAngle}deg)`;
+        if (upperArm) upperArm.style.transform = `rotate(${shoulderAngle}deg)`;
+        if (forearm) forearm.style.transform = `rotate(${elbowAngle}deg)`;
         if (oar) oar.style.transform = `rotate(${oarAngle}deg)`;
-        if (body) body.style.transform = `rotate(${bodyLean}deg)`;
-        if (seat) seat.style.transform = `translateX(${seatPosition}px)`;
+        if (body) body.style.transform = `rotate(${torsoAngle}deg)`;
+        if (seat) seat.style.transform = `translateX(${seatPosition * 0.3}px)`;
+        if (blade) blade.style.transform = `rotate(${bladeRoll}deg)`;
       });
 
       // Boat subtle movement
@@ -178,7 +197,9 @@ export default function RowingAnimation() {
           {/* Oar */}
           <g className="oar" style={{ transformOrigin: '60px 65px' }}>
             <line x1="25" y1="68" x2="95" y2="62" stroke="#8b4513" strokeWidth="3" strokeLinecap="round"/>
-            <ellipse cx="20" cy="69" rx="10" ry="4" fill="#dc2626"/>
+            <g className="blade" style={{ transformOrigin: '20px 69px' }}>
+              <ellipse cx="20" cy="69" rx="10" ry="4" fill="#dc2626"/>
+            </g>
           </g>
         </g>
         
@@ -206,7 +227,9 @@ export default function RowingAnimation() {
           {/* Oar */}
           <g className="oar" style={{ transformOrigin: '100px 65px' }}>
             <line x1="65" y1="68" x2="135" y2="62" stroke="#8b4513" strokeWidth="3" strokeLinecap="round"/>
-            <ellipse cx="60" cy="69" rx="10" ry="4" fill="#dc2626"/>
+            <g className="blade" style={{ transformOrigin: '60px 69px' }}>
+              <ellipse cx="60" cy="69" rx="10" ry="4" fill="#dc2626"/>
+            </g>
           </g>
         </g>
         
@@ -234,7 +257,9 @@ export default function RowingAnimation() {
           {/* Oar */}
           <g className="oar" style={{ transformOrigin: '140px 65px' }}>
             <line x1="105" y1="68" x2="175" y2="62" stroke="#8b4513" strokeWidth="3" strokeLinecap="round"/>
-            <ellipse cx="100" cy="69" rx="10" ry="4" fill="#dc2626"/>
+            <g className="blade" style={{ transformOrigin: '100px 69px' }}>
+              <ellipse cx="100" cy="69" rx="10" ry="4" fill="#dc2626"/>
+            </g>
           </g>
         </g>
         
@@ -262,7 +287,9 @@ export default function RowingAnimation() {
           {/* Oar */}
           <g className="oar" style={{ transformOrigin: '180px 65px' }}>
             <line x1="145" y1="68" x2="215" y2="62" stroke="#8b4513" strokeWidth="3" strokeLinecap="round"/>
-            <ellipse cx="140" cy="69" rx="10" ry="4" fill="#dc2626"/>
+            <g className="blade" style={{ transformOrigin: '140px 69px' }}>
+              <ellipse cx="140" cy="69" rx="10" ry="4" fill="#dc2626"/>
+            </g>
           </g>
         </g>
       </svg>
