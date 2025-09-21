@@ -120,7 +120,7 @@ export default function ProjectSection() {
               <img
                 src="/ffbd.jpg"
                 alt="Functional Flow Block Diagram - Digital Boat Tracker System Functions"
-                className="w-full h-[300px] lg:h-[400px] object-cover scale-105 rounded-lg shadow-lg border border-gray-200"
+                className="w-full h-[300px] lg:h-[400px] object-contain bg-gray-50 rounded-lg shadow-lg border border-gray-200"
               />
             </div>
           </div>
