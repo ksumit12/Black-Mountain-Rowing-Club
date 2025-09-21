@@ -34,56 +34,56 @@ export default function RowingAnimation() {
         let oarAngle, shoulderAngle, elbowAngle, torsoAngle, seatPosition, bladeRoll;
         
         if (rowingCycle < 0.15) {
-          // Catch phase (0-15%) - arms extended forward
+          // Catch phase (0-15%)
           const catchProgress = rowingCycle / 0.15;
           oarAngle = -22 + (catchProgress * 12); // -22° to -10°
-          shoulderAngle = -30 + (catchProgress * 10); // -30° to -20° (arms forward)
-          elbowAngle = -45 + (catchProgress * 15); // -45° to -30° (elbows bent forward)
+          shoulderAngle = 55 - (catchProgress * 15); // 55° to 40°
+          elbowAngle = 70 - (catchProgress * 20); // 70° to 50°
           torsoAngle = -3 + (catchProgress * 1); // -3° to -2°
           seatPosition = 0; // Front
           bladeRoll = 0; // Squared
         } else if (rowingCycle < 0.35) {
-          // Early drive (15-35%) - pulling back
+          // Early drive (15-35%)
           const driveProgress = (rowingCycle - 0.15) / 0.20;
           oarAngle = -10 + (driveProgress * 15); // -10° to +5°
-          shoulderAngle = -20 - (driveProgress * 20); // -20° to -40° (pulling back)
-          elbowAngle = -30 - (driveProgress * 20); // -30° to -50° (bending more)
+          shoulderAngle = 40 - (driveProgress * 15); // 40° to 25°
+          elbowAngle = 50 - (driveProgress * 25); // 50° to 25°
           torsoAngle = -2 + (driveProgress * 2); // -2° to 0°
           seatPosition = driveProgress * 60; // 0% to 60%
           bladeRoll = 0; // Squared
         } else if (rowingCycle < 0.60) {
-          // Mid drive to finish (35-60%) - full pull
+          // Mid drive to finish (35-60%)
           const finishProgress = (rowingCycle - 0.35) / 0.25;
           oarAngle = 5 + (finishProgress * 13); // +5° to +18°
-          shoulderAngle = -40 - (finishProgress * 20); // -40° to -60° (full pull)
-          elbowAngle = -50 - (finishProgress * 10); // -50° to -60° (arms close to body)
+          shoulderAngle = 25 - (finishProgress * 10); // 25° to 15°
+          elbowAngle = 25 + (finishProgress * 15); // 25° to 40°
           torsoAngle = 0 + (finishProgress * 3); // 0° to +3°
           seatPosition = 60 + (finishProgress * 40); // 60% to 100%
           bladeRoll = finishProgress * 16; // 0° to +16° (feather)
         } else if (rowingCycle < 0.75) {
-          // Hands away (60-75%) - extending arms
+          // Hands away (60-75%)
           const handsAwayProgress = (rowingCycle - 0.60) / 0.15;
           oarAngle = 18 - (handsAwayProgress * 10); // +18° to +8°
-          shoulderAngle = -60 + (handsAwayProgress * 20); // -60° to -40° (extending)
-          elbowAngle = -60 + (handsAwayProgress * 20); // -60° to -40° (extending)
+          shoulderAngle = 15 + (handsAwayProgress * 10); // 15° to 25°
+          elbowAngle = 40 - (handsAwayProgress * 20); // 40° to 20°
           torsoAngle = 3 - (handsAwayProgress * 1); // +3° to +2°
           seatPosition = 100 - (handsAwayProgress * 30); // 100% to 70%
           bladeRoll = 16; // Feathered
         } else if (rowingCycle < 0.90) {
-          // Recovery (75-90%) - returning forward
+          // Recovery (75-90%)
           const recoveryProgress = (rowingCycle - 0.75) / 0.15;
           oarAngle = 8 - (recoveryProgress * 16); // +8° to -8°
-          shoulderAngle = -40 + (recoveryProgress * 20); // -40° to -20° (returning forward)
-          elbowAngle = -40 + (recoveryProgress * 10); // -40° to -30° (returning forward)
+          shoulderAngle = 25 + (recoveryProgress * 15); // 25° to 40°
+          elbowAngle = 20 + (recoveryProgress * 30); // 20° to 50°
           torsoAngle = 2 - (recoveryProgress * 3); // +2° to -1°
           seatPosition = 70 - (recoveryProgress * 40); // 70% to 30%
           bladeRoll = 16 - (recoveryProgress * 16); // 16° to 0° (square)
         } else {
-          // Return to catch (90-100%) - final forward reach
+          // Return to catch (90-100%)
           const returnProgress = (rowingCycle - 0.90) / 0.10;
           oarAngle = -8 - (returnProgress * 14); // -8° to -22°
-          shoulderAngle = -20 - (returnProgress * 10); // -20° to -30° (final reach)
-          elbowAngle = -30 - (returnProgress * 15); // -30° to -45° (final reach)
+          shoulderAngle = 40 + (returnProgress * 15); // 40° to 55°
+          elbowAngle = 50 + (returnProgress * 20); // 50° to 70°
           torsoAngle = -1 - (returnProgress * 2); // -1° to -3°
           seatPosition = 30 - (returnProgress * 30); // 30% to 0%
           bladeRoll = 0; // Squared
