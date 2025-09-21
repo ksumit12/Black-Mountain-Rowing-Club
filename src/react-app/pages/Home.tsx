@@ -2,6 +2,7 @@ import Navigation from '@/react-app/components/Navigation';
 import Hero from '@/react-app/components/Hero';
 import AboutSection from '@/react-app/components/AboutSection';
 import ProjectSection from '@/react-app/components/ProjectSection';
+import TimelineSection from '@/react-app/components/TimelineSection';
 import TeamSection from '@/react-app/components/TeamSection';
 import MapSection from '@/react-app/components/MapSection';
 import Footer from '@/react-app/components/Footer';
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <AboutSection />
       <ProjectSection />
+      <TimelineSection />
       <TeamSection />
       <MapSection />
       <Footer />
