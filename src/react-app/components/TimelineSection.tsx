@@ -57,49 +57,49 @@ const TimelineSection: React.FC = () => {
       title: "System Integration & Internal Testing Plan",
       description: "Prepare integration plan, describe hardware-software interfaces, and develop testing strategies.",
       deliverables: ["Integration strategy", "Testing plan", "Simulation strategies"],
-      status: "completed"
+      status: "in-progress"
     },
     {
       week: 9,
       title: "Simulation Setup & Initial Testing",
       description: "Develop simulation environment, design test scenarios, and conduct initial performance validation.",
       deliverables: ["Simulation setup", "Test case design", "Preliminary results"],
-      status: "completed"
+      status: "upcoming"
     },
     {
       week: 10,
       title: "Simulation Execution & Performance Analysis",
       description: "Execute full simulation testing, analyze performance, and document findings and improvements.",
       deliverables: ["Simulation results report", "Performance analysis", "System optimizations"],
-      status: "completed"
+      status: "upcoming"
     },
     {
       week: 11,
       title: "Showcase Preparation & Poster Development",
       description: "Create professional project poster, prepare for showcase event, and finalize documentation.",
       deliverables: ["Showcase poster", "Final documentation", "Presentation preparation"],
-      status: "completed"
+      status: "upcoming"
     },
     {
       week: 12,
       title: "Showcase Poster Submission",
       description: "Submit finalized showcase poster and prepare for the official Showcase Event.",
       deliverables: ["Finalized poster submission", "Showcase event preparation"],
-      status: "completed"
+      status: "upcoming"
     },
     {
       week: 13,
       title: "Draft Handover Submission & Audit 3",
       description: "Compile comprehensive handover document and deliver Audit 3 presentation to stakeholders.",
       deliverables: ["Draft handover document", "Audit 3 presentation"],
-      status: "completed"
+      status: "upcoming"
     },
     {
       week: 14,
       title: "Final Showcase Event and Project Submission",
       description: "Participate in official Showcase Event and submit complete project repository and documentation.",
       deliverables: ["Showcase event participation", "Final project submission", "Complete documentation"],
-      status: "completed"
+      status: "upcoming"
     }
   ];
 
@@ -208,19 +208,23 @@ const TimelineSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8"
         >
           <div className="text-center bg-white rounded-lg shadow-lg p-6">
             <div className="text-3xl font-bold text-red-500 mb-2">14</div>
             <div className="text-slate-600">Weeks Duration</div>
           </div>
           <div className="text-center bg-white rounded-lg shadow-lg p-6">
-            <div className="text-3xl font-bold text-red-500 mb-2">3</div>
-            <div className="text-slate-600">Audit Milestones</div>
+            <div className="text-3xl font-bold text-red-500 mb-2">8</div>
+            <div className="text-slate-600">Current Week</div>
           </div>
           <div className="text-center bg-white rounded-lg shadow-lg p-6">
-            <div className="text-3xl font-bold text-red-500 mb-2">100%</div>
-            <div className="text-slate-600">Project Completion</div>
+            <div className="text-3xl font-bold text-red-500 mb-2">57%</div>
+            <div className="text-slate-600">Project Progress</div>
+          </div>
+          <div className="text-center bg-white rounded-lg shadow-lg p-6">
+            <div className="text-3xl font-bold text-red-500 mb-2">3</div>
+            <div className="text-slate-600">Audit Milestones</div>
           </div>
         </motion.div>
       </div>
