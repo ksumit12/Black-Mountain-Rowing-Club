@@ -9,33 +9,33 @@ export default function ProjectSection() {
   const features = [
     {
       icon: Monitor,
-      title: "Digital Dashboard",
-      description: "Real-time tracking interface replacing manual whiteboard systems"
+      title: "Automatic Detection",
+      description: "Automatically detect boat location and classify as in-shed or on-water with real-time updates within 5 seconds"
+    },
+    {
+      icon: Clock,
+      title: "Real-time Status",
+      description: "Provide real-time operational status of each boat with updates visible within 5 seconds of state change"
+    },
+    {
+      icon: Shield,
+      title: "System Resilience",
+      description: "Implement fail-safe modes to maintain core functionality during network or power interruptions"
+    },
+    {
+      icon: Database,
+      title: "Usage Logging",
+      description: "Log boat usage data with entry/exit times and duration, accurate to within one second"
+    },
+    {
+      icon: Users,
+      title: "Lock-up Notifications",
+      description: "Notify designated lock-up role if boats are outside shed at configured closing time"
     },
     {
       icon: Smartphone,
       title: "Mobile Access",
-      description: "Track boats from anywhere with responsive mobile design"
-    },
-    {
-      icon: Shield,
-      title: "Safety First",
-      description: "Enhanced safety monitoring and alert systems for all vessels"
-    },
-    {
-      icon: Clock,
-      title: "Real-time Updates",
-      description: "Instant status updates and tracking information"
-    },
-    {
-      icon: Users,
-      title: "User Management",
-      description: "Comprehensive user roles and permission systems"
-    },
-    {
-      icon: Database,
-      title: "Data Analytics",
-      description: "Historical data and usage analytics for better decision making"
+      description: "Accessible from mobile and desktop platforms supporting recent browser versions"
     }
   ];
 
@@ -53,11 +53,11 @@ export default function ProjectSection() {
             THE PROJECT
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Project Features
+            System Features
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our digital boat tracking system modernizes the traditional whiteboard approach
-            with real-time updates, safety features, and comprehensive analytics.
+            Our digital boat tracking system delivers core functionalities based on prioritized requirements,
+            ensuring reliable detection, real-time monitoring, and comprehensive data management.
           </p>
         </motion.div>
 
@@ -94,30 +94,33 @@ export default function ProjectSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 uppercase tracking-wide">
-                Project Description
+                System Architecture
               </h3>
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p className="text-lg">
-                  The Digital Boat Tracker project addresses the inefficiencies of manual 
-                  boat tracking systems used by rowing clubs. Our solution replaces the 
-                  traditional whiteboard approach with a modern, digital platform.
+                  The Digital Boat Tracker system boundary includes all internal functions responsible for 
+                  detecting boats, confirming usage, managing data and power, generating and buffering logs, 
+                  storing data, and producing 24-hour reports.
                 </p>
                 <p>
-                  The system provides real-time tracking of boat locations, user assignments, 
-                  and safety status. It includes features for member management, booking 
-                  systems, and comprehensive reporting tools.
+                  <strong>Core Internal Functions:</strong> Detection, confirmation, power management, 
+                  data logging, status checking, and report generation represent the system under our team's control.
                 </p>
                 <p>
-                  Developed using modern web technologies, the platform ensures reliability, 
-                  scalability, and ease of use for rowing club administrators and members.
+                  <strong>External Interfaces:</strong> The boat (tracked entity), users (system consumers), 
+                  and Wi-Fi/Internet connections interface with the system but remain external to our control boundary.
+                </p>
+                <p>
+                  <strong>Data Flow:</strong> BLE beacon signals and sensor data flow into the system, 
+                  while usage logs, database entries, and daily reports flow outward to users.
                 </p>
               </div>
             </div>
             <div className="relative">
               <img
-                src="/IMG_3712.jpg"
-                alt="Digital tracking dashboard"
-                className="w-full h-[300px] lg:h-[400px] object-cover"
+                src="/ffbd.jpg"
+                alt="Functional Flow Block Diagram - Digital Boat Tracker System Architecture"
+                className="w-full h-[300px] lg:h-[400px] object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>

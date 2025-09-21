@@ -55,10 +55,10 @@ export default function AboutSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="overflow-hidden">
+            <div className="overflow-hidden rounded-lg shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&h=600"
-                alt="Rowing facility with boats"
+                src="/ffbd.jpg"
+                alt="Functional Flow Block Diagram - Digital Boat Tracker System Architecture"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />
             </div>
