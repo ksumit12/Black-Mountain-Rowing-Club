@@ -94,7 +94,7 @@ export default function ProjectSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 uppercase tracking-wide">
-                System Architecture
+                Functional Flow Block Diagram
               </h3>
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p className="text-lg">
@@ -119,8 +119,8 @@ export default function ProjectSection() {
             <div className="relative">
               <img
                 src="/ffbd.jpg"
-                alt="Functional Flow Block Diagram - Digital Boat Tracker System Architecture"
-                className="w-full h-[300px] lg:h-[400px] object-cover rounded-lg shadow-lg"
+                alt="Functional Flow Block Diagram - Digital Boat Tracker System Functions"
+                className="w-full h-[300px] lg:h-[400px] object-contain bg-gray-50 rounded-lg shadow-lg border border-gray-200"
               />
             </div>
           </div>

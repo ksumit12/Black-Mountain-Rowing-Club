@@ -57,9 +57,9 @@ export default function AboutSection() {
           >
             <div className="overflow-hidden rounded-lg shadow-lg">
               <img
-                src="/ffbd.jpg"
-                alt="Functional Flow Block Diagram - Digital Boat Tracker System Architecture"
-                className="w-full h-[400px] lg:h-[500px] object-cover"
+                src="/IMG_3712.jpg"
+                alt="Digital tracking dashboard and boat management system"
+                className="w-full h-[400px] lg:h-[500px] object-contain bg-gray-50"
               />
             </div>
           </motion.div>
