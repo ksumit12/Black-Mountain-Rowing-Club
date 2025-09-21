@@ -59,7 +59,7 @@ export default function AboutSection() {
               <img
                 src="/IMG_3712.jpg"
                 alt="Digital tracking dashboard and boat management system"
-                className="w-full h-[400px] lg:h-[500px] object-contain bg-gray-50"
+                className="w-full h-[400px] lg:h-[500px] object-cover scale-110"
               />
             </div>
           </motion.div>
