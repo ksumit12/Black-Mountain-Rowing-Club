@@ -115,7 +115,7 @@ export default function ProjectSection() {
             </div>
             <div className="relative">
               <img
-                src="https://mocha-cdn.com/0199672f-8c34-7bd3-8d98-c2a941454b67/IMG_3712.jpg"
+                src="/IMG_3712.jpg"
                 alt="Digital tracking dashboard"
                 className="w-full h-[300px] lg:h-[400px] object-cover"
               />

@@ -24,7 +24,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <img 
-              src="https://mocha-cdn.com/0199672f-8c34-7bd3-8d98-c2a941454b67/Role_-Senior-brand-designer._Goal_-Create-a-navbar-ready-minimal-icon-logo-for-Digital-Boat-Tracker-(Black-Mountain-Rowing-Club).-The-icon-must-read-at-24%E2%80%9340-px-tall-and-match-a-dark-navy-header._Brand-idea-(one-li.jpg"
+              src="/logo.jpg"
               alt="Digital Boat Tracker Logo"
               className="h-8 w-8 mr-3"
             />
