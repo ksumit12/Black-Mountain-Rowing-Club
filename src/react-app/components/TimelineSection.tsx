@@ -57,35 +57,35 @@ const TimelineSection: React.FC = () => {
       title: "System Integration & Internal Testing Plan",
       description: "Prepare integration plan, describe hardware-software interfaces, and develop testing strategies.",
       deliverables: ["Integration strategy", "Testing plan", "Simulation strategies"],
-      status: "in-progress"
+      status: "completed"
     },
     {
       week: 9,
       title: "Simulation Setup & Initial Testing",
       description: "Develop simulation environment, design test scenarios, and conduct initial performance validation.",
       deliverables: ["Simulation setup", "Test case design", "Preliminary results"],
-      status: "upcoming"
+      status: "completed"
     },
     {
       week: 10,
       title: "Simulation Execution & Performance Analysis",
       description: "Execute full simulation testing, analyze performance, and document findings and improvements.",
       deliverables: ["Simulation results report", "Performance analysis", "System optimizations"],
-      status: "upcoming"
+      status: "completed"
     },
     {
       week: 11,
       title: "Showcase Preparation & Poster Development",
       description: "Create professional project poster, prepare for showcase event, and finalize documentation.",
       deliverables: ["Showcase poster", "Final documentation", "Presentation preparation"],
-      status: "upcoming"
+      status: "completed"
     },
     {
       week: 12,
       title: "Showcase Poster Submission",
       description: "Submit finalized showcase poster and prepare for the official Showcase Event.",
       deliverables: ["Finalized poster submission", "Showcase event preparation"],
-      status: "upcoming"
+      status: "in-progress"
     },
     {
       week: 13,
@@ -215,11 +215,11 @@ const TimelineSection: React.FC = () => {
             <div className="text-slate-600">Weeks Duration</div>
           </div>
           <div className="text-center bg-white rounded-lg shadow-lg p-6">
-            <div className="text-3xl font-bold text-red-500 mb-2">8</div>
+            <div className="text-3xl font-bold text-red-500 mb-2">12</div>
             <div className="text-slate-600">Current Week</div>
           </div>
           <div className="text-center bg-white rounded-lg shadow-lg p-6">
-            <div className="text-3xl font-bold text-red-500 mb-2">57%</div>
+            <div className="text-3xl font-bold text-red-500 mb-2">86%</div>
             <div className="text-slate-600">Project Progress</div>
           </div>
           <div className="text-center bg-white rounded-lg shadow-lg p-6">
