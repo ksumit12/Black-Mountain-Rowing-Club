@@ -75,30 +75,30 @@ const TimelineSection: React.FC = () => {
     },
     {
       week: 11,
-      title: "Showcase Preparation & Poster Development",
-      description: "Create professional project poster, prepare for showcase event, and finalize documentation.",
-      deliverables: ["Showcase poster", "Final documentation", "Presentation preparation"],
+      title: "Audit 3 & Final Documentation Review",
+      description: "Conduct comprehensive Audit 3 presentation, review all project documentation, and prepare for final showcase event.",
+      deliverables: ["Audit 3 presentation", "Final documentation review", "Showcase preparation"],
       status: "completed"
     },
     {
       week: 12,
-      title: "Showcase Poster Submission",
-      description: "Submit finalized showcase poster and prepare for the official Showcase Event.",
-      deliverables: ["Finalized poster submission", "Showcase event preparation"],
+      title: "Showcase Event & Final Review",
+      description: "Participate in the official showcase event, present project to stakeholders, and conduct final project review.",
+      deliverables: ["Showcase event participation", "Final project presentation", "Stakeholder feedback"],
       status: "in-progress"
     },
     {
       week: 13,
-      title: "Draft Handover Submission & Audit 3",
-      description: "Compile comprehensive handover document and deliver Audit 3 presentation to stakeholders.",
-      deliverables: ["Draft handover document", "Audit 3 presentation"],
+      title: "Technical Report & TMC Submission",
+      description: "Compile comprehensive technical report documenting all aspects of the project and submit TMC (Technical Management Committee) documentation.",
+      deliverables: ["Technical report", "TMC submission", "Final technical documentation"],
       status: "upcoming"
     },
     {
       week: 14,
-      title: "Final Showcase Event and Project Submission",
-      description: "Participate in official Showcase Event and submit complete project repository and documentation.",
-      deliverables: ["Showcase event participation", "Final project submission", "Complete documentation"],
+      title: "Professional Reflection & Project Closure",
+      description: "Complete professional reflection on project learnings, conduct final project closure activities, and prepare handover documentation.",
+      deliverables: ["Professional reflection document", "Project closure report", "Final handover documentation"],
       status: "upcoming"
     }
   ];
