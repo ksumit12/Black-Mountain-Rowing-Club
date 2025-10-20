@@ -86,8 +86,11 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="#" 
-                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
+                  href="http://172.20.10.12:5000/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-1 group relative"
+                  title="Device must be on the same network as the Raspberry Pi"
                 >
                   System Demo
                   <ExternalLink size={12} />
