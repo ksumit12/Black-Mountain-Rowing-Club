@@ -52,6 +52,12 @@ export default function Navigation() {
                 The Project
               </button>
               <button
+                onClick={() => scrollToSection('requirements')}
+                className="text-slate-200 hover:text-red-400 transition-colors font-medium uppercase text-sm tracking-wide"
+              >
+                Requirements
+              </button>
+              <button
                 onClick={() => scrollToSection('team')}
                 className="text-slate-200 hover:text-red-400 transition-colors font-medium uppercase text-sm tracking-wide"
               >
@@ -99,8 +105,14 @@ export default function Navigation() {
                 The Project
               </button>
               <button
+                onClick={() => scrollToSection('requirements')}
+                className="block w-full text-left px-3 py-2 text-slate-200 hover:text-red-400 transition-colors font-medium uppercase text-sm tracking-wide"
+              >
+                Requirements
+              </button>
+              <button
                 onClick={() => scrollToSection('team')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors font-medium uppercase text-sm tracking-wide"
+                className="block w-full text-left px-3 py-2 text-slate-200 hover:text-red-400 transition-colors font-medium uppercase text-sm tracking-wide"
               >
                 Team
               </button>

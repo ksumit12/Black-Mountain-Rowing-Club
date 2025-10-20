@@ -2,6 +2,7 @@ import Navigation from '@/react-app/components/Navigation';
 import Hero from '@/react-app/components/Hero';
 import AboutSection from '@/react-app/components/AboutSection';
 import ProjectSection from '@/react-app/components/ProjectSection';
+import RequirementsSection from '@/react-app/components/RequirementsSection';
 import TimelineSection from '@/react-app/components/TimelineSection';
 import SimulationResultsSection from '@/react-app/components/SimulationResultsSection';
 import TeamSection from '@/react-app/components/TeamSection';
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <AboutSection />
       <ProjectSection />
+      <RequirementsSection />
       <TimelineSection />
       <SimulationResultsSection />
       <TeamSection />
