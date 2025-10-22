@@ -171,7 +171,7 @@ export default function RequirementsSection() {
           {/* Score Badge */}
           <div className="inline-flex items-center gap-3 bg-green-100 text-green-800 px-6 py-3 rounded-full text-lg font-semibold">
             <CheckCircle className="w-6 h-6" />
-            Software Requirements: 15/15 = 100% ✅
+            Software Requirements: 15/15 = 100%
           </div>
         </motion.div>
 

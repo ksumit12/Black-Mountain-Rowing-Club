@@ -2,12 +2,12 @@
 
 A modern, comprehensive digital boat tracking system designed for the Black Mountain Rowing Club. This system provides real-time boat location monitoring, usage analytics, and automated notifications through innovative BLE beacon technology.
 
-## 🚀 Live Demo
+## Live Demo
 
 **System Demo**: [http://172.20.10.12:5000/](http://172.20.10.12:5000/)
-> ⚠️ **Note**: Device must be on the same network as the Raspberry Pi to access the demo
+> **Note**: Device must be on the same network as the Raspberry Pi to access the demo
 
-## 📋 Project Overview
+## Project Overview
 
 The Digital Boat Tracker system modernizes boat tracking for the Black Mountain Rowing Club through:
 
@@ -17,32 +17,32 @@ The Digital Boat Tracker system modernizes boat tracking for the Black Mountain 
 - **Multi-platform Access**: Responsive web interface for mobile and desktop
 - **Secure & Reliable**: HTTPS encryption with offline-capable local database
 
-## 🎯 Requirements Implementation
+## Requirements Implementation
 
 Our system implements **15/15 software requirements (100% compliance)**:
 
 ### Core Features
-- ✅ **R1**: Automatic location detection (BLE beacon scanning)
-- ✅ **R2**: Real-time status display (1-second updates)
-- ✅ **R3**: Boat usage logging (entry/exit/duration tracking)
-- ✅ **R4**: Lock-up notifications (overdue alerts)
-- ✅ **R5**: Profile management (3-click beacon registration)
+- **R1**: Automatic location detection (BLE beacon scanning)
+- **R2**: Real-time status display (1-second updates)
+- **R3**: Boat usage logging (entry/exit/duration tracking)
+- **R4**: Lock-up notifications (overdue alerts)
+- **R5**: Profile management (3-click beacon registration)
 
 ### System Reliability
-- ✅ **R6**: Network resilience (offline SQLite database)
-- ✅ **R7**: Multiple boat profiles (API management)
-- ✅ **R8**: Secure data storage (HTTPS + encryption)
-- ✅ **R9**: Data retention (90+ days storage)
+- **R6**: Network resilience (offline SQLite database)
+- **R7**: Multiple boat profiles (API management)
+- **R8**: Secure data storage (HTTPS + encryption)
+- **R9**: Data retention (90+ days storage)
 
 ### User Experience
-- ✅ **R10**: User documentation (README, setup guides)
-- ✅ **R11**: Cost-effective design (~$150 total hardware)
-- ✅ **R12**: Historical analytics (reports + CSV export)
-- ✅ **R13**: Multi-platform access (responsive design)
-- ✅ **R14**: Privacy protection (no personal data)
-- ✅ **R15**: No system interference (standard BLE)
+- **R10**: User documentation (README, setup guides)
+- **R11**: Cost-effective design (~$150 total hardware)
+- **R12**: Historical analytics (reports + CSV export)
+- **R13**: Multi-platform access (responsive design)
+- **R14**: Privacy protection (no personal data)
+- **R15**: No system interference (standard BLE)
 
-## 🛠️ Technical Architecture
+## Technical Architecture
 
 ### Key Components
 - **Frontend**: React + TypeScript + Tailwind CSS
@@ -61,7 +61,7 @@ Our system implements **15/15 software requirements (100% compliance)**:
 | `start_single_scanner_demo.sh` | Starts entire system |
 | `enable_security.sh` | Enables HTTPS + encryption |
 
-## 🌐 Website Features
+## Website Features
 
 The project includes a comprehensive website showcasing:
 
@@ -75,7 +75,7 @@ The project includes a comprehensive website showcasing:
 - **Map Section**: Location and contact information
 - **Footer**: Quick links, resources, and System Demo access
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js (v18+ recommended)
@@ -108,7 +108,7 @@ The project includes a comprehensive website showcasing:
 npm run build
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Black-Mountain-Rowing-Club/
@@ -133,7 +133,7 @@ Black-Mountain-Rowing-Club/
 └── README.md
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 Create a `.env` file in the root directory:
@@ -145,13 +145,13 @@ VITE_APP_TITLE=Digital Boat Tracker
 ### Tailwind CSS
 The project uses Tailwind CSS for styling. Configuration is in `tailwind.config.js`.
 
-## 📊 Performance Metrics
+## Performance Metrics
 
-- **Software Requirements**: 15/15 = 100% ✅
+- **Software Requirements**: 15/15 = 100%
 - **Hardware Requirements**: 2/2 (procurement specifications)
 - **Total Compliance**: 15/17 = 88.2% (100% for software)
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -159,20 +159,26 @@ The project uses Tailwind CSS for styling. Configuration is in `tailwind.config.
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👥 Team
+## Team
 
 Developed by the Digital Boat Tracker team for the Black Mountain Rowing Club.
 
-## 📞 Support
+## Support
 
-- **Discord Community**: [Join our Discord](https://discord.gg/shDEGBSe2d)
+
 - **System Demo**: [http://172.20.10.12:5000/](http://172.20.10.12:5000/) (requires same network as RPi)
 - **GitHub Issues**: [Report issues](https://github.com/ksumit12/Black-Mountain-Rowing-Club/issues)
 
 ---
 
 **Built with ❤️ for the Black Mountain Rowing Club**
+
+## Creator
+
+**Designed, developed, and maintained entirely by [Sumit Khobragade](https://github.com/ksumit12)**
+
+*This complete system - from frontend to backend, hardware integration to deployment - represents my individual work and dedication to modernizing boat tracking for the Black Mountain Rowing Club.*

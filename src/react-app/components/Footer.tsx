@@ -137,12 +137,28 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-            <p className="text-gray-400">
-              © {currentYear} Digital Boat Tracker. All rights reserved.
+          <div className="flex flex-col items-center text-center space-y-4">
+            <p className="text-gray-400 text-sm">
+              Built with <span className="text-red-500">❤️</span> for the Black Mountain Rowing Club
             </p>
-            <p className="text-gray-400 mt-2 md:mt-0">
-              Built for Black Mountain Rowing Club
+            <div className="text-gray-400 text-sm">
+              <p className="mb-1">
+                Designed, developed, and maintained entirely by{' '}
+                <a 
+                  href="https://github.com/ksumit12" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 transition-colors font-semibold"
+                >
+                  Sumit Khobragade
+                </a>
+              </p>
+              <p className="text-xs text-gray-500 italic max-w-2xl mx-auto">
+                Complete system from frontend to backend, hardware integration to deployment
+              </p>
+            </div>
+            <p className="text-gray-500 text-xs">
+              © {currentYear} Digital Boat Tracker. All rights reserved.
             </p>
           </div>
         </div>
